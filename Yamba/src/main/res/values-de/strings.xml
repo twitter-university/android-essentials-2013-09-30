@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Einstellungen</string>
+    <string name="compose_label_text">Neuer Tweet</string>
+    <string name="edit_tweet_hint">Was gibt\'s Neues?</string>
+</resources>
