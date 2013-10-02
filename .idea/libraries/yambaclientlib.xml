@@ -2,7 +2,6 @@
   <library name="yambaclientlib">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Yamba/lib/yambaclientlib.jar!/" />
-      <root url="jar://$PROJECT_DIR$/Yamba/lib/yambaclientlib.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
