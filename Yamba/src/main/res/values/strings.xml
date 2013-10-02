@@ -6,5 +6,7 @@
     <string name="compose_label_text">New Tweet</string>
     <string name="button_post_text">Tweet</string>
     <string name="edit_tweet_hint">What\'s happening?</string>
+    <string name="post_tweet_success">Tweet posted successfully</string>
+    <string name="post_tweet_fail">Failed to post tweet</string>
 
 </resources>
