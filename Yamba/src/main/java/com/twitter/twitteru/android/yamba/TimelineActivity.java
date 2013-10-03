@@ -21,6 +21,12 @@ import com.twitter.twitteru.android.yamba.svc.YambaContract;
 public class TimelineActivity extends ListActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     private static final int TIMELINE_LOADER = 42;
 
+    private static final String[] PROJECTION = {
+            YambaContract.Timeline.Columns.ID,
+            YambaContract.Timeline.Columns.HANDLE,
+            YambaContract.Timeline.Columns.TWEET,
+    };
+
     private static final String[] FROM = {
         YambaContract.Timeline.Columns.HANDLE,
         YambaContract.Timeline.Columns.TWEET,
@@ -50,10 +56,10 @@ public class TimelineActivity extends ListActivity implements LoaderManager.Load
         return new CursorLoader(
                 this,
                 YambaContract.Timeline.URI,
+                PROJECTION,
                 null,
                 null,
-                null,
-                YambaContract.Timeline.Columns.TIMESTAMP + " DESC");
+                null);
     }
 
     @Override
