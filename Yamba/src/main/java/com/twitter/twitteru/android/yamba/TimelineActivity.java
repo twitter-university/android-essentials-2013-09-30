@@ -1,13 +1,12 @@
 package com.twitter.twitteru.android.yamba;
 
-import android.app.Activity;
 import android.app.ListActivity;
+import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.app.LoaderManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +24,7 @@ public class TimelineActivity extends ListActivity implements LoaderManager.Load
             YambaContract.Timeline.Columns.ID,
             YambaContract.Timeline.Columns.HANDLE,
             YambaContract.Timeline.Columns.TWEET,
+            YambaContract.Timeline.Columns.TIMESTAMP
     };
 
     private static final String[] FROM = {
@@ -59,7 +59,7 @@ public class TimelineActivity extends ListActivity implements LoaderManager.Load
                 PROJECTION,
                 null,
                 null,
-                null);
+                YambaContract.Timeline.Columns.TIMESTAMP + " DESC");
     }
 
     @Override
